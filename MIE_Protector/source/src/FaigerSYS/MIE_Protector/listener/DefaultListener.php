@@ -6,6 +6,7 @@ use pocketmine\event\player\PlayerInteractEvent;
 
 use pocketmine\tile\ItemFrame;
 use FaigerSYS\MapImageEngine\item\FilledMap;
+use pocketmine\event\block\ItemFrameDropItemEvent;
 
 class DefaultListener implements Listener {
 	
