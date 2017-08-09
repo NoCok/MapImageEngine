@@ -21,5 +21,16 @@ class DefaultListener implements Listener {
 			}
 		}
 	}
+	/**
+	 * @priority LOWEST
+	 */
+	public function onFrameDestroy(ItemFrameDropItemEvent $e) {
+		if (!$e->isCancelled()) {
+			$block = $e->getBlock();
+			$frame = $block->getLevel()->getTile($block);
+			if ($frame instanceof ItemFrame && $frame->getItem() instanceof FilledMap && !$e->getPlayer()->hasPermission('mapimageengine.bypassprotect'))  {
+			$e->setCancelled(true);
+		}
+	}
 	
 }
