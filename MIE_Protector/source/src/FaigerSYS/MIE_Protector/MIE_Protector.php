@@ -14,12 +14,6 @@ class MIE_Protector extends PluginBase {
 		$this->getLogger()->info(CLR::GOLD . 'MIE_Protector enabling...');
 		
 		$this->getServer()->getPluginManager()->registerEvents(new DefaultListener, $this);
-		try {
-			if (class_exists('\pocketmine\event\block\ItemFrameDropItemEvent')) {
-				$this->getServer()->getPluginManager()->registerEvents(new ExtendedListener, $this);
-			}
-		} catch (\Throwable $e) {}
-		
 		$this->getLogger()->info(CLR::GOLD . 'MIE_Protector enabled!');
 	}
 	
