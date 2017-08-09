@@ -31,7 +31,7 @@ class DefaultListener implements Listener {
 			$frame = $block->getLevel()->getTile($block);
 			if ($frame instanceof ItemFrame && $frame->getItem() instanceof FilledMap && !$e->getPlayer()->hasPermission('mapimageengine.bypassprotect'))  {
 			$e->setCancelled(true);
+			}
 		}
 	}
-	
 }
